@@ -1,0 +1,11 @@
+/* Keep metadata readable on common laptop and phone displays. */
+.hero-visual{background-position:center 61%}
+.sidebar nav a{font-size:13px}.sidebar-label{font-size:9px}.user-chip strong{font-size:12px}.user-chip small{font-size:10px}
+.discovery-title h2{font-size:16px}.discovery-title p{font-size:11px}.search-form input{font-size:12px}.search-form .primary{font-size:11px}.engine-label{font-size:9px}.prompt-chips button{font-size:9px}.filter-button{font-size:11px}
+.section-heading p{font-size:12px}.section-heading>a{font-size:12px}.rider-card h3{font-size:16px}.location{font-size:11px}.rider-facts{font-size:11px}.tags>span{font-size:10px}.card-foot{font-size:10px}.match{font-size:10px}.demo{font-size:9px}
+.spot-body h3{font-size:15px}.spot-body p{font-size:12px;min-height:61px}.spot-body .card-foot{font-size:10px}.spot-body .card-foot>span{font-size:9px}.spot-category{font-size:10px}
+.ride-title h3{font-size:14px}.status{font-size:9px}.ride-info p{font-size:11px}.ride-meta{font-size:10px}.ride-join>span{font-size:10px}.ride-join>strong{font-size:11px}.ride-date span{font-size:10px}
+.hero p{font-size:13px}.hero-note>span:last-child{font-size:11px}.hero-copy .eyebrow{font-size:9px}.community-note>span{font-size:12px}.community-note strong{font-size:13px}.community-note>button{font-size:11px}footer{font-size:10px}
+@media(max-width:1150px){.spot-body .card-foot>span{display:none}.rider-facts{font-size:10px}.ride-meta{font-size:9px}}
+@media(max-width:850px){.sidebar nav a{font-size:0}.hero p{font-size:12px}.hero-copy .eyebrow{font-size:8px}.hero-note>span:last-child{font-size:10px}}
+@media(max-width:600px){.discovery-title h2{font-size:13px}.discovery-title p{font-size:10px}.search-form input{font-size:11px}.prompt-chips button{font-size:9px}.prompt-chips{gap:5px}.section-heading p{font-size:10px}.section-heading>a{font-size:10px}.spot-body h3{font-size:14px}.spot-body p{font-size:11px}.spot-category{font-size:8px}.spot-body .card-foot{font-size:9px}.ride-title h3{font-size:12px}.ride-info p{font-size:9px}.ride-meta{font-size:9px}.ride-join>span{font-size:8px}.ride-join>strong{font-size:9px}.hero h1{font-size:35px}.hero-copy .eyebrow{font-size:7px}.hero p{font-size:11px}.hero-note>span:last-child{font-size:9px}.community-note>span{font-size:10px}.community-note strong{font-size:11px}footer{font-size:9px}}

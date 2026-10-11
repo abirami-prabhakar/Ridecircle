@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    environment:
+      POSTGRES_DB: ridecircle
+      POSTGRES_USER: ridecircle
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ridecircle-local-only}
+    ports:
+      - "127.0.0.1:54329:5432"
+    volumes:
+      - ridecircle-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ridecircle -d ridecircle"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://ridecircle:${POSTGRES_PASSWORD:-ridecircle-local-only}@db:5432/ridecircle
+      JWT_SECRET: ${JWT_SECRET:-local-development-secret-change-before-deploying}
+      AI_MODE: ${AI_MODE:-rules}
+      OLLAMA_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-gemma3:4b}
+      ORS_API_KEY: ${ORS_API_KEY:-}
+      ROUTING_PROVIDER: ${ROUTING_PROVIDER:-osrm}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:8011:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    depends_on:
+      db:
+        condition: service_healthy
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:5173:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  ridecircle-db:

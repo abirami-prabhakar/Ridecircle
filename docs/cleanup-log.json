@@ -1,0 +1,61 @@
+[
+  {
+    "Path": ".npm-cache",
+    "FilesBefore": 453,
+    "BytesRemoved": 221761906,
+    "Remains": false,
+    "Errors": []
+  },
+  {
+    "Path": ".playwright",
+    "FilesBefore": 605,
+    "BytesRemoved": 752827471,
+    "Remains": false,
+    "Errors": []
+  },
+  {
+    "Path": ".tmp",
+    "FilesBefore": 98,
+    "BytesRemoved": 394396,
+    "Remains": false,
+    "Errors": [
+      "Access to the path 'E:\\Desktop\\Open source\\Hacktoberfest\\week 1\\.tmp\\tmplyrdi5hq' is denied."
+    ],
+    "Resolution": "Protected temporary folder removed with elevated access; its size could not be measured."
+  },
+  {
+    "Path": "ridecircle\\frontend\\node_modules",
+    "FilesBefore": 6576,
+    "BytesRemoved": 131498628,
+    "Remains": false,
+    "Errors": []
+  },
+  {
+    "Path": "ridecircle\\frontend\\dist",
+    "FilesBefore": 5,
+    "BytesRemoved": 1872445,
+    "Remains": false,
+    "Errors": []
+  },
+  {
+    "Path": "ridecircle\\frontend\\test-results",
+    "FilesBefore": 3,
+    "BytesRemoved": 902030,
+    "Remains": false,
+    "Errors": []
+  },
+  {
+    "Path": "ridecircle\\frontend\\tsconfig.tsbuildinfo",
+    "FilesBefore": 1,
+    "BytesRemoved": 357,
+    "Remains": false,
+    "Errors": []
+  },
+  {
+    "Path": "ridecircle\\backend\\.venv",
+    "FilesBefore": 4,
+    "BytesRemoved": 507354,
+    "Remains": false,
+    "Errors": []
+  }
+]
